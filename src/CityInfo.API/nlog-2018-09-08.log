@@ -1,0 +1,251 @@
+2018-09-08 00:02:57.6467|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:02:58.9333|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2018-09-08 00:02:58.9333|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2018-09-08 00:02:59.0420|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 137.9287ms 200 
+2018-09-08 00:02:59.3332|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 450.3082ms 404 text/plain
+2018-09-08 00:06:41.5946|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities  
+2018-09-08 00:06:41.9112|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:06:41.9221|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:06:41.9371|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:06:42.0727|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) with arguments () - ModelState is Valid
+2018-09-08 00:06:42.2542|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+ORDER BY [c].[Name]
+2018-09-08 00:06:42.3979|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-09-08 00:06:42.7589|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 955.456ms
+2018-09-08 00:06:42.7589|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1187.3896ms 200 application/json; charset=utf-8
+2018-09-08 00:06:54.1087|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1  
+2018-09-08 00:06:54.1197|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:06:54.1197|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:06:54.1197|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:06:54.2703|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) with arguments (1, False) - ModelState is Valid
+2018-09-08 00:06:54.5780|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (16ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2018-09-08 00:06:54.5890|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-09-08 00:06:54.5890|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) in 474.5127ms
+2018-09-08 00:06:54.6040|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 496.9459ms 200 application/json; charset=utf-8
+2018-09-08 00:06:59.1599|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1?includePointsOfInterest=true  
+2018-09-08 00:06:59.1688|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:06:59.1688|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:06:59.1688|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:06:59.1908|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) with arguments (1, True) - ModelState is Valid
+2018-09-08 00:06:59.2696|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[Id] = @__cityId_0
+ORDER BY [c].[Id]
+2018-09-08 00:06:59.4426|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (26ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+INNER JOIN (
+    SELECT DISTINCT TOP(1) [c].[Id]
+    FROM [Cities] AS [c]
+    WHERE [c].[Id] = @__cityId_0
+    ORDER BY [c].[Id]
+) AS [c0] ON [p].[CityId] = [c0].[Id]
+ORDER BY [c0].[Id]
+2018-09-08 00:06:59.5264|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-09-08 00:06:59.5404|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCity (CityInfo.API) in 373.2319ms
+2018-09-08 00:06:59.5404|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 384.6835ms 200 application/json; charset=utf-8
+2018-09-08 00:07:31.4577|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1/pointsofinterest  
+2018-09-08 00:07:31.4696|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:31.4866|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:31.4926|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:07:31.4926|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointsOfInterestController.GetPointsOfInterest (CityInfo.API) with arguments (1) - ModelState is Valid
+2018-09-08 00:07:31.5305|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:07:31.5434|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+WHERE [p].[CityId] = @__cityId_0
+2018-09-08 00:07:31.5564|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-09-08 00:07:31.5564|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointsOfInterestController.GetPointsOfInterest (CityInfo.API) in 94.687ms
+2018-09-08 00:07:31.5564|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 129.2761ms 200 application/json; charset=utf-8
+2018-09-08 00:07:36.2379|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/4/pointsofinterest  
+2018-09-08 00:07:36.2499|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:36.2499|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:36.2578|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:07:36.2578|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointsOfInterestController.GetPointsOfInterest (CityInfo.API) with arguments (4) - ModelState is Valid
+2018-09-08 00:07:36.2808|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:07:36.2808|INFO|CityInfo.API.Controllers.PointsOfInterestController|City with id 4 wasn't found when accessing points of interest.
+2018-09-08 00:07:36.2937|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-09-08 00:07:36.2937|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointsOfInterestController.GetPointsOfInterest (CityInfo.API) in 57.7245ms
+2018-09-08 00:07:36.3077|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 69.3733ms 404 text/plain
+2018-09-08 00:07:43.0676|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1/pointsofinterest/1  
+2018-09-08 00:07:43.0746|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:43.0746|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:43.0926|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:07:43.0926|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointsOfInterestController.GetPointOfInterest (CityInfo.API) with arguments (1, 1) - ModelState is Valid
+2018-09-08 00:07:43.1055|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:07:43.1205|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?', @__pointOfInterestId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+WHERE ([p].[CityId] = @__cityId_0) AND ([p].[Id] = @__pointOfInterestId_1)
+2018-09-08 00:07:43.3419|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-09-08 00:07:43.3419|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointsOfInterestController.GetPointOfInterest (CityInfo.API) in 271.5263ms
+2018-09-08 00:07:43.3419|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 282.492ms 200 application/json; charset=utf-8
+2018-09-08 00:07:47.7830|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/4/pointsofinterest/1  
+2018-09-08 00:07:47.7830|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:47.7930|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:47.7930|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:07:47.7930|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointsOfInterestController.GetPointOfInterest (CityInfo.API) with arguments (4, 1) - ModelState is Valid
+2018-09-08 00:07:47.8060|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:07:47.8060|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-09-08 00:07:47.8060|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointsOfInterestController.GetPointOfInterest (CityInfo.API) in 26.1829ms
+2018-09-08 00:07:47.8060|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 34.7718ms 404 text/plain
+2018-09-08 00:07:52.5014|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities/1/pointsofinterest/10  
+2018-09-08 00:07:52.5014|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:52.5124|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:07:52.5124|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:07:52.5124|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointsOfInterestController.GetPointOfInterest (CityInfo.API) with arguments (1, 10) - ModelState is Valid
+2018-09-08 00:07:52.5243|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:07:52.5243|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?', @__pointOfInterestId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CityId], [p].[Description], [p].[Name]
+FROM [PointsOfInterest] AS [p]
+WHERE ([p].[CityId] = @__cityId_0) AND ([p].[Id] = @__pointOfInterestId_1)
+2018-09-08 00:07:52.5243|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-09-08 00:07:52.5243|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointsOfInterestController.GetPointOfInterest (CityInfo.API) in 30.7192ms
+2018-09-08 00:07:52.5403|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 39.0301ms 404 text/plain
+2018-09-08 00:16:19.7528|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:16:21.2219|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2018-09-08 00:16:21.2219|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2018-09-08 00:16:21.3007|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 104.3829ms 200 
+2018-09-08 00:16:21.5759|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 403.8945ms 404 text/plain
+2018-09-08 00:16:26.5586|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/cities/3/pointsofinterest application/json 117
+2018-09-08 00:16:26.6863|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:16:26.6863|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:16:26.7192|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:16:27.1241|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.PointsOfInterestController.CreatePointOfInterest (CityInfo.API) with arguments (3, CityInfo.API.Models.PointOfInterestForCreationDto) - ModelState is Valid
+2018-09-08 00:16:27.3645|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (12ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Cities] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-09-08 00:16:27.5579|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2018-09-08 00:16:27.8641|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (21ms) [Parameters=[@p0='?', @p1='?' (Size = 200), @p2='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [PointsOfInterest] ([CityId], [Description], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [PointsOfInterest]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2018-09-08 00:16:27.9519|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-09-08 00:16:28.0556|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.PointsOfInterestController.CreatePointOfInterest (CityInfo.API) in 1403.9273ms
+2018-09-08 00:16:28.0556|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1504.2932ms 201 application/json; charset=utf-8
+2018-09-08 00:17:09.6225|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities  
+2018-09-08 00:17:09.6334|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:17:09.6334|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-09-08 00:17:09.6334|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-09-08 00:17:09.6504|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) with arguments () - ModelState is Valid
+2018-09-08 00:17:09.6723|INFO|Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilderFactory|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+ORDER BY [c].[Name]
+2018-09-08 00:17:09.6873|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-09-08 00:17:09.7122|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 85.0874ms
+2018-09-08 00:17:09.7122|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 97.5601ms 200 application/json; charset=utf-8
